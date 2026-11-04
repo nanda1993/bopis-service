@@ -11,12 +11,15 @@
 const MAX_QUANTITY = 6;
 const STOCK_BUFFER = 2;
 const HIGH_VALUE = 2000;
+// Perishable is decided by category, never by the date on the packet (frozen counts, pantry does not).
+const PERISHABLE_CATEGORIES = new Set(['produce', 'dairy', 'meat', 'frozen', 'bakery']);
 
 export function isBopisEligible(item, ctx = {}) {
   const { quantity = 1, storeStock = Infinity, storeOpen = true, ageVerified = false } = ctx;
 
   if (!storeOpen) return false;
   if (item.category === 'gift-card') return false;
+  if (PERISHABLE_CATEGORIES.has(item.category)) return false; // REQ-003
   if (item.hazmat) return false;
   if (item.ageRestricted && !ageVerified) return false;
   if (quantity > MAX_QUANTITY) return false;
