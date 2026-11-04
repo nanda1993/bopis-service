@@ -17,13 +17,13 @@ const PERISHABLE_CATEGORIES = new Set(['produce', 'dairy', 'meat', 'frozen', 'ba
 export function isBopisEligible(item, ctx = {}) {
   const { quantity = 1, storeStock = Infinity, storeOpen = true, ageVerified = false } = ctx;
 
-  if (!storeOpen) return false;
-  if (item.category === 'gift-card') return false;
+  if (!storeOpen) return false; // REQ-007
+  if (item.category === 'gift-card') return false; // REQ-006
   if (PERISHABLE_CATEGORIES.has(item.category)) return false; // REQ-003
-  if (item.hazmat) return false;
-  if (item.ageRestricted && !ageVerified) return false;
-  if (quantity > MAX_QUANTITY) return false;
-  if (storeStock < quantity + STOCK_BUFFER) return false;
-  if (item.price > HIGH_VALUE) return false;
+  if (item.hazmat) return false; // REQ-004
+  if (item.ageRestricted && !ageVerified) return false; // REQ-005
+  if (quantity > MAX_QUANTITY) return false; // REQ-002
+  if (storeStock < quantity + STOCK_BUFFER) return false; // REQ-001
+  if (item.price > HIGH_VALUE) return false; // REQ-009
   return true;
 }
