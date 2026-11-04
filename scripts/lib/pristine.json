@@ -1,0 +1,8 @@
+{
+  "docs/prd.md": "e08e1813d65ad8a20cc5416446da8715dddf1f85ce9b0b3d59d51da18b449e0e",
+  "docs/slack-thread.md": "754c2c9a7fb8a1e62299d9c2f70c479d72927b4ba16840cc5d661f2937d13cef",
+  "src/bopis/catalog.js": "5d1242c6c5f4f1ca6ad9546690d56ac664c63f45525b2ec226f1a0b81fe36610",
+  "src/bopis/eligibility.js": "d7bb5b01d82e8e25aaef1f5b63a066377af8c8b98a00939c6ae040ac25f1c798",
+  "tests/baseline/kit.test.js": "2188808e930323ef9edd5eb22faddc32059cf38923673c21a047215dfc400c39",
+  "tests/existing/eligibility.test.js": "fe62280d5c636bc75b57d44e061b50876161f29f961d4ad7e2e2f1b2d410fa8e"
+}

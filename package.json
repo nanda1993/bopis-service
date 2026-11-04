@@ -1,0 +1,23 @@
+{
+  "name": "bopis-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DD8 lab: a retail BOPIS eligibility service whose code has drifted from its PRD. Turn the PRD into a spec, close the gap, and trace every requirement to its code and its test.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "help": "node scripts/help.mjs",
+    "setup": "node scripts/lab.mjs setup",
+    "start": "node scripts/lab.mjs start",
+    "progress": "node scripts/progress.mjs",
+    "hint": "node scripts/hint.mjs",
+    "step": "node scripts/lab.mjs step",
+    "checkpoint": "node scripts/lab.mjs checkpoint",
+    "doctor": "node scripts/lab.mjs doctor",
+    "po": "node scripts/po.mjs",
+    "trace": "node scripts/trace.mjs"
+  }
+}
